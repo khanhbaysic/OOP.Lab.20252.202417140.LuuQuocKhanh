@@ -1,4 +1,4 @@
-package ICT;
+package hust.soict.dsai.lab01;
 import java.util.Scanner;
 public class Assignment6_4 {
 	public static boolean isLeapYear(int x) {

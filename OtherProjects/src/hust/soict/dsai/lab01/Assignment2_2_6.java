@@ -1,3 +1,4 @@
+package hust.soict.dsai.lab01;
 import java.util.Scanner;
 public class Assignment2_2_6{
     public static void main(String args[]){
