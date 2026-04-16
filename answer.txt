@@ -1,2 +1,0 @@
-2.1
-Both methods allow adding multiple DVDs, but they differ in syntax and flexibility. Using an array requires the caller to manually create and wrap objects into an array before passing them. On the other hand, passing an arbitrary number of arguments makes the code cleaner and more flexible. Therefore, passing an arbitrary number of arguments is preferred for its convenience and readability in method calls.

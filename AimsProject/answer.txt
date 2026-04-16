@@ -1,0 +1,12 @@
+Section 2.1
+Both methods allow adding multiple DVDs, but they differ in syntax and flexibility. Using an array requires the caller to manually create and wrap objects into an array before passing them. On the other hand, passing an arbitrary number of arguments makes the code cleaner and more flexible. Therefore, passing an arbitrary number of arguments is preferred for its convenience and readability in method calls.
+
+Section 3
+- Pass-by-Value: Java is strict pass-by-value language. This means when we pass an object to a method, Java passes a copy of the reference (the memory address), not the actual object itself.
+- Why swap() failed: The swap method only exchanged the local copies of the references. The original variables in the main method remained pointed at their original memory addresses.
+- Why changeTitle() worked: Even though the reference is a copy, it still points to the same object on the Heap.Therefore, calling a setter method modifies the actual data of that object.
+- How to swap: To successfully swap two DVDs, the method must exchange their internal attributes (like title, category, cost) one by one.
+
+Section 9
+- The + Operator: Using + for concatenation in a loop is very slow because String objects are immutable. Each concatenation creates a brand-new object and leaves the old one as "garbage" for the Garbage Collector, leading to poor performance.
+- StringBuilder: This class uses a mutable buffer, allowing changes to the character sequence without creating new objects. This makes StringBuilder (or String Buffer) significantly faster and more memory-efficient for any task involving repetitive string modifications.

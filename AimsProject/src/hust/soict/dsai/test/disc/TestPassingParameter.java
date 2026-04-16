@@ -1,7 +1,9 @@
+package hust.soict.dsai.test.disc;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 public class TestPassingParameter {
     public static void main(String[] args){
-        DVD jungleDVD = new DVD("Jungle");
-        DVD cinderellaDVD = new DVD("Cinderella");
+        DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");
+        DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella");
         swap(jungleDVD, cinderellaDVD);
         System.out.println("jungleDVD title: " + jungleDVD.getTitle());
         System.out.println("cinderellaDVD title: " + cinderellaDVD.getTitle());
@@ -13,9 +15,9 @@ public class TestPassingParameter {
         o1 = o2;
         o2 = temp;
     }
-    public static void changeTitle(DVD dvd, String title){
+    public static void changeTitle(DigitalVideoDisc dvd, String title){
         String oldTitle = dvd.getTitle();
         dvd.setTitle(title);
-        dvd = new DVD(oldTitle);
+        dvd = new DigitalVideoDisc(oldTitle);
     }
 }
