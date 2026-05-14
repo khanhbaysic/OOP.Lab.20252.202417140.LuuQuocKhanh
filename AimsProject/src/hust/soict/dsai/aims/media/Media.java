@@ -47,6 +47,9 @@ public abstract class Media{
         Media other = (Media) obj;
         return title != null && title.equalsIgnoreCase(other.title);
     }
+    public boolean isMatch(String title) {
+        return this.getTitle().toLowerCase().contains(title.toLowerCase());
+}
     @Override
     public String toString() {
     return "Media: [Title = " + title + ", Category = " + category + ", Cost = " + cost + " $]";

@@ -3,6 +3,9 @@ package hust.soict.dsai.aims.media;
 public class DigitalVideoDisc extends Disc implements Playable {
     private static int nbDigitalVideoDiscs = 0;
     // updated constructor
+    public DigitalVideoDisc(int id, String title, String category, String director, int length, float cost) {
+    super(id, title, category, cost, director, length);
+}
     public DigitalVideoDisc(String title) {
         super(++nbDigitalVideoDiscs, title, null, 0.0f, null, 0);
     }

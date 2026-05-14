@@ -1,17 +1,34 @@
 package hust.soict.dsai.aims.media;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Book extends Media {
     private List<String> authors = new ArrayList<String>();
+    private int contentLength;
+
     public Book() {
         super();
     }
-//constructor with parameters
+
     public Book(int id, String title, String category, float cost) {
         super(id, title, category, cost);
+        this.contentLength = 0;
     }
-// methods to add and remove authors
+
+    public Book(int id, String title, String category, float cost, int contentLength) {
+        super(id, title, category, cost);
+        this.contentLength = contentLength;
+    }
+
+    public int getContentLength() {
+        return contentLength;
+    }
+
+    public void setContentLength(int contentLength) {
+        this.contentLength = contentLength;
+    }
+
     public void addAuthor(String authorName) {
         if (!authors.contains(authorName)) {
             authors.add(authorName);
@@ -20,6 +37,7 @@ public class Book extends Media {
             System.out.println("Author '" + authorName + "' is already in the list.");
         }
     }
+
     public void removeAuthor(String authorName) {
         if (authors.contains(authorName)) {
             authors.remove(authorName);
@@ -28,8 +46,9 @@ public class Book extends Media {
             System.out.println("Author '" + authorName + "' not found in the list.");
         }
     }
+
     @Override
     public String toString() {
-        return "Book: " + this.getTitle() + " - " + this.getCategory() + " - Authors: " + authors.toString() + ": " + this.getCost() + " $";
-}
+        return "Book: "+ this.getTitle()+ " - "+ this.getCategory()+ " - Authors: "+ authors.toString()+ " - Content length: "+ this.getContentLength()+ " tokens"+ " - "+ this.getCost()+ " $";
+    }
 }
